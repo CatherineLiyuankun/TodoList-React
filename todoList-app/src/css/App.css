@@ -1,0 +1,238 @@
+/*.TodoListApp {
+  text-align: center;
+}*/
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  width: 80px;
+  text-align: left;
+}
+
+.logo-container {
+    width: 120px;
+    display: none;
+}
+
+.header-text-container {
+    width: 700px;
+    display: inline;
+    font-family:  cursive;
+}
+
+.App-header {
+  display: none;
+}
+
+.Todo-header {
+  background-color: #845b47;
+  height: 120px;
+  padding: 20px;
+  color: white;
+  font-size: 48px;
+}
+
+.App-header-text {
+    text-align: center;
+    margin: 10px;
+    border-bottom: solid;
+    border-bottom-color: white; 
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.Todo-input {
+    text-align: left;
+    font-family: 'tahoma';
+    font-size: 28px;
+    border: none;
+    padding-bottom: 10px;
+    margin: 20px;
+    margin-left: 30px;
+    color: #845b47;
+    background-color: transparent;
+    border-bottom: solid;
+    border-bottom-color: rgba(160, 113, 90, 1);
+    width: 574px;
+}
+
+/*DataGrid */
+.DataGrid {
+    width: 800px;
+    border: none;
+    font-family: 'tahoma';
+    margin-left: 30px;
+}
+
+.DataGrid-headerTable {
+    margin-bottom: 5px; 
+    height: 35px
+}
+
+.DataGrid-headerText {
+    text-align: left;
+    color: #845b47;
+    font-weight: bold;
+    padding: 1px 4px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.DataGrid .DataGrid-itemsContainer .DataGrid-itemwrap-table {
+    width: 100%;
+    table-layout: fixed;
+    position: relative !ie7;
+}
+
+.DataGrid-itemsContainer tr {
+    border-style: dashed;
+    border-color: grey;
+}
+
+.DataGrid-itemsScrollBox {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.DataGrid-itemwrap-table {
+    display: table;
+    border-collapse: separate;
+
+}
+
+.DataRow {
+    height: 35px;
+    font-size: 20px;
+};
+
+.DataRow.selected {
+    background-color: #845b47;
+    color: white !important;
+}
+
+.DataRow.selected td button.importance-button {
+    color: white;
+}
+
+.DataRow.selected .task-content {
+    color: white;
+}
+
+.DataRow.even {
+    background-color: rgba(132, 91, 71, 0.28);
+    color: #845b47;
+}
+
+.DataRow.even td button.importance-button {
+    color: #845b47;
+}
+
+.DataRow.even .task-content {
+    color: #845b47;
+}
+
+.DataRow.odd {
+  background-color: #845b47;
+  color: white !important;
+}
+
+.DataRow.odd td button.importance-button {
+    color: white;
+}
+
+.DataRow.odd .task-content {
+    color: white;
+}
+
+.check-task {
+    margin-left: 20px;
+}
+
+.task-content {
+    border: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-family: 'tahoma';
+    font-size: 18px;
+}
+
+.importance-button {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    font-family: fantasy;
+    color: #845b47;
+    border: none;
+}
+
+.col0 {
+    width: 60px;
+}
+
+.col1 {
+    width: 300px;
+}
+
+.col2 {
+    width: 120px;
+}
+
+.col3 {
+    width: 60px;
+}
+
+.col0-h {
+    width: 89px;
+}
+
+.col1-h {
+    width: 445px;
+}
+
+.col2-h {
+    width: 178px;
+}
+
+.col3-h {
+    width: 88px;
+}
+
+.delete-task {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: url(../images/Remove.png) no-repeat center center;
+}
+
+
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button.close {
+  display: none;
+  font-size: 12px;
+  height: 18px;
+  width: 18px;
+}
+
+/*Footer */
+
+.Todo-footer {
+  height: 50px;
+  line-height: 50px;
+  font-family: cursive;
+  margin-left: 30px;
+  font-size: 14px;
+}
