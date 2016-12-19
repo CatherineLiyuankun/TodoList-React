@@ -29,22 +29,22 @@ var TodoListApp = React.createClass({
     };
   },
 
-  // generate a random id for new task 
+/*  // generate a random id for new task 
   generateId: function() {
     return Math.floor(Math.random() * 9000) + 1000;
-  },
+  },*/
 
-  getIndexById: function getIndexById(taskId) {
+/*  getIndexById: function getIndexById(taskId) {
     var index = 0;
     for (; index < this.state.data.length; index++) {
         if (this.state.data[index].id === taskId)
             return index;
     }
-  },
+  },*/
 
   handleTaskAdd: function(taskContent) {
     var data = this.state.data;
-    var newItem = [{"id": this.generateId(), "task": taskContent, "importance":"Normal", "complete": false}];
+    var newItem = [{"id": Model.generateId(), "task": taskContent, "importance":"Normal", "complete": false}];
     data = newItem.concat(data);
     this.setState({data});
   },
@@ -59,20 +59,23 @@ var TodoListApp = React.createClass({
 
   handleToggleComplete: function(taskId) {
     var data = this.state.data;
-    var index = this.getIndexById(taskId);
+    // var index = this.getIndexById(taskId);
+    var index = Model.getIndexById(taskId, this.state.data);
     data[index].complete = data[index].complete ? false: true;
     this.setState({data});
   },
 
   handleUpdateTask: function(taskId, taskContent) {
     var data = this.state.data;
-    var index = this.getIndexById(taskId);
+    var index = Model.getIndexById(taskId, this.state.data);
+    // var index = this.getIndexById(taskId);
     data[index].task = taskContent;
     this.setState({data});
   },
 
   handleTaskIndex: function(taskId){
-    return this.getIndexById(taskId, this.state.data);
+    return Model.getIndexById(taskId, this.state.data);
+    // return this.getIndexById(taskId);
   },
 
   render: function() {
@@ -223,7 +226,7 @@ var TodoRow = React.createClass({
     // this.setState({classes: classes, index: this.getTaskIndex()});
   },
   importanceTask: function(){
-    
+
   },
   render: function() {
     var classes = this.state.classes;
